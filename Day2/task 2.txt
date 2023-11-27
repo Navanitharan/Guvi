@@ -1,0 +1,14 @@
+Document Object
+Describe the document object as the representation of the web page loaded in the browser.
+Explain that the document object is a property of the window object and can be accessed with window.document or just document.
+List some of the common properties and methods of the document object, such as document.body, document.title, document.getElementById(), document.createElement(), etc.
+Provide some code snippets to demonstrate how to use document properties and methods.
+Window Object
+Describe the window object as the global object that represents the browser window or tab.
+Explain that the window object contains many properties and methods that are related to the browser environment, such as window.location, window.history, window.alert(), window.open(), etc.
+List some of the common properties and methods of the window object, such as window.innerWidth, window.innerHeight, window.addEventListener(), window.setTimeout(), etc.
+Provide some code snippets to demonstrate how to use window properties and methods.
+Differences between Document and Window Objects
+Summarize the main differences between document and window objects in terms of their definition, scope, and functionality.
+Highlight some of the scenarios where document and window objects are used differently or interchangeably.
+Provide some code examples to illustrate the differences between document and window objects.

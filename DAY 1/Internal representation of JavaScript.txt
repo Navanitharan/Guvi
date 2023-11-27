@@ -1,0 +1,63 @@
+JavaScript is an versatile and dynamics in nature, JavaScript is heavily relies on object as a fundamental structure. Object plays an pivotal role in representing and organizing the data.
+In JavaScript object is an collection of key-value pairs, where key is a string and the values can be any data type, including other objects. Objects can be an real world entities, encapsulating both data and the functions that operate on that data.
+object can be created using various ways, such as object literals, constructors or the Object.create() method.
+
+// Using an object literal
+var person = {
+  name: "Alice",
+  age: 25
+};
+
+// Using a constructor function
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+var person = new Person("Alice", 25);
+
+// Using Object.create()
+var person = Object.create(Object.prototype, {
+  name: {
+    value: "Alice",
+    writable: true,
+    enumerable: true,
+    configurable: true
+  },
+  age: {
+    value: 25,
+    writable: true,
+    enumerable: true,
+    configurable: true
+  }
+});
+
+we can Access the property of an object with the dot notation or bracket notation for example:
+// Using dot notation
+console.log(person.name); // Alice
+console.log(person.age); // 25
+
+// Using bracket notation
+console.log(person["name"]); // Alice
+console.log(person["age"]); // 25
+
+However the property name is not an valid identifier, such as number, a space we can use only the bracket notation with a string or a variable
+// Using bracket notation with a string
+person["first name"] = "Alice";
+person["last-name"] = "Smith";
+person["3"] = "three";
+console.log(person["first name"]); // Alice
+console.log(person["last-name"]); // Smith
+console.log(person["3"]); // three
+
+// Using bracket notation with a variable
+var prop = "age";
+console.log(person[prop]); // 25
+
+JavaScript objects are internally represented as combination of map and array. Map is a data structure that stores key-value pair. Key is unique and has the corresponding values. Array is an data structure that stores the sequence of character, Where each value has the index value it the position of the value in the array the map part of the object stores the named properties such as name, age. and the array part of the object stores the values such as 3. The map and array are connected by the pointer, which is a reference to the memory location of the data
+The internal representation of the object will effects how we access and modify the properties of an object. when we access an property of an object the JavaScript engine will first look for the property in the map part of the object. If the property is found it will return. If the property is not found in the map part. The JavaScript engine will look for the property in the prototype chain object, which is the sequence of the object that are linked by the prototype pointer. If the property found in the prototype chain, the value is returned. If the property is not found in the prototype it will return undefined. 
+For example, when we access the name property of the person, the engine find the property in the map part of the object and return “Alice”. When we access the toString() property  of the person object, the engine dose not find the property in the map part of the object, but find the property in the Object.prototype object, which is the prototype of the person object, and returns the value of the method.
+ When we modify a property of an object, the JavaScript engine first looks for the property in the map part of the object. If the property is found, the value is updated. If the property is not found, the engine creates a new property in the map part of the object and assigns the value to it. However, if the property is found in the prototype chain of the object, the engine does not modify the property in the prototype object, but creates a new property in the map part of the object and assigns the value to it. This is because the prototype object is shared by all the objects that inherit from it, and modifying the property in the prototype object would affect all the other objects. For example, when we modify the name property of the person object, the engine finds the property in the map part of the object and updates the value to “Bob”. When we modify the toString() property of the person object, the engine does not find the property in the map part of the object, but finds it in the Object.prototype object, which is the prototype of the person object. The engine does not modify the property in the Object.prototype object, but creates a new property in the map part of the person object and assigns the value to it
+
+  
+
